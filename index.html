@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>오수저</title>
+	<style>
+ 	 @import url('https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@500;700&display=swap');
+  	.notosans{font-family:'Noto Sans KR', sans-serif;}
+
+ 	@font-face {
+    	font-family: 'TmonMonsori';
+    	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/TmonMonsori.woff') format('woff');
+    	font-weight: normal;
+    	font-style: normal;
+}
+
+ *{box-sizing: border-box;}
+html, body{magin:0; font-family: "TmonMonsori", sans-serif; font-weight: normal;}
+html, header, body,nav, div, h1, h2, p, img, section, footer, strike, strong, ol, ul, li{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+	color: #003c92;
+
+}
+ol, ul{list-style: none;}
+button{margin: 0; outline: none; box-shadow: none; background: none;}
+button: focus{outline: none;}
+ button,[type='button'],[type='reset'],[type='submit'] {
+      padding: 0;
+      line-height: inherit;
+      color: inherit;
+      border: 0;
+      background-color: transparent;
+      background-image: none;
+      cursor: pointer;
+    }
+    a{text-decoration: none;}
+    img{width: 100%;}
+
+    .w-auto{width: auto;}
+    .wrap{position: relative; width: 1440px; margin: 0 auto;}
+    .header{position: fixed; left: 0; top: 0; width: 100%;}
+    .header .inner{display: flex; justify-content: space-between; align-items: center; width: 1440px; margin: 0 auto; padding: 11px 24px 0 32px;}
+    .header .logo{width: 77px; height: 70px; margin: 0;}
+    .header .gnb{display: flex;}
+    .header .gnb li{margin-left: 40px;}
+    .header .gnb li a{font-size: 19px; font-weight: 700; line-height: 28px;}
+
+    section{overflow: hidden;}
+    .sec01{position: relative; padding: 257px 0 311px; background: #FFF100; text-align: center;}
+    .sec01 h2{width: 522px; margin: 0 auto;}
+    .sec01 p{margin-top: 30px; font-size: 40px; line-height: 50px; font-weight: 900;}
+
+    .sec02{display: flex;height: 937px; padding: 184px;}
+    .sec02 .img-wrap{width: 586px;}
+    .sec02 .text-wrap{width: 779px; word-break: keep-all; }
+    .sec02 .text-wrap strong{display: block; font-size: 128px; font-weight: 900; line-height: 160px;}
+    .sec02 .text-wrap p{margin-top: 40px; font-size: 30px; line-height: 41.13px; font-weight: 700;}
+
+    .sec03{padding: 276px 24px 165px; background: #FFF100; text-align: center;}
+    .sec03 h2{font-size: 64px; line-height: 80px; font-weight: 900;}
+    .sec03 .img-01{display: flex; justify-content: space-between; align-items: center; margin-top: 29px;}
+    .sec03 .img-01 .img-box{width: 330px;}
+    .sec03 .img-01 .img-box p{margin-top: 3px; font-size: 32px; font-weight: 700;}
+    .sec03 > p{margin-top: 208px; font-size: 55px; font-weight: 500; line-height: 79.64px;}
+    .sec03 .img-02{width: 1082px; height: 306px; margin: 352px auto 0;} 
+
+    .sec04{padding: 186px; }
+    .sec04 .step{display: flex; justify-content: space-between; flex-wrap: wrap; width: 100%; padding: 218px 114px 359px; background: rgb(255,241,0); background: linear-gradient(180deg, rgba(255,241,0,1) 0%, rgba(224,45,51,1) 100%);}
+    .sec04 .step li{position: relative;}
+    .sec04 .step li .number{position: absolute; left: 29px; top: -13px; width: 58px;}
+    .sec04 .step li .img-circle{overflow: hidden; width: 332px; height: 332px; border-radius: 50%; }
+    .sec04 .step li .img-txt{width: 380px; margin: -30px 0 0 127px;}
+    .sec04 .step li:nth-child(3),
+    .sec04 .step li:nth-child(4){margin-top: 60px;}
+    .sec04 .success{background: url(./images/sec04_bg.png) no-repeat center bottom 222px / cover;}
+    .sec04 .success .img-wrap{width: 750px; margin: -10px auto 0;}
+    .sec04 .success strong{display: block; margin-top: 104px; color: #E02D33; font-size: 70px; font-weight: 900;  text-align: center;}
+
+    .sec05{padding: 70px 64px; background: rgb(255,255,255);  background: linear-gradient(-90deg, rgba(255,255,255,1) 0%, rgba(224,45,51,1) 100%);}
+    .sec05 p{color: #FFF100; font-size: 70px; font-weight: 900; line-height: 87.5px;}
+
+    .sec06{text-align: center;}
+    .sec06 .bg1{padding: 228px 0 0; background: rgb(255,255,255); background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,241,0,0.5074404761904762) 100%);}
+    .sec06 .txt-01{padding: 0 51px 0 36px;}
+    .sec06 .txt-01 .speech-bubble{display: flex; justify-content: center; align-items: center; width: 609px; height: 134px; border-radius: 50%; background: #fff; box-shadow: 14px 11px 5px rgba(224,45,51,1);}
+    .sec06 .txt-02{margin-top: 104px;}
+    .sec06 .txt-02 p{font-size: 120px; font-weight: 900; line-height: 150px; }
+    .sec06 .txt-02 p strong{display: block; color: #e02d33;}
+    .sec06 .txt-03{margin-top: 35px; font-size: 32px; font-weight: 700; line-height: 46.34px }
+    .sec06 .bg2{padding-top: 93px; padding-bottom: 205px; background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #003C92 33.79%);}
+    .sec06 .bg2 .img-wrap{position: relative; width: 1007px;height: 632px;margin: 0 auto;}
+    .sec06 .bg2 .img-wrap img{position: absolute; left: 52%; top: 0; transform: translateX(-50%);}
+    .sec06 .bg2 .img-wrap img:nth-child(1){top: 30px;}
+    .sec06 .img-wrap img:nth-child(2){width: 469px; height: 632px;}
+    .sec06 .box{width: 793px; margin: 0 auto; padding: 38px 61px; background: red;}
+    .sec06 .box p{color: #fff; font-size: 32px; font-weight: 700; line-height: 46.34px;}
+
+    .sec07 .bg1{padding: 191px 0 0 0; background: #003C92; text-align: center;}
+    .sec07 .bg1 p{color: #fff100; font-size: 98px; font-weight: 900; line-height: 140.5px;}
+    .sec07 .bg1 .img-wrap{display: flex; justify-content: space-between; align-items: center; width: 717px; margin: 0 auto; padding: 132px 0 179px; }
+    .sec07 .bg1 .img-wrap img{width: 267px; height: 242px;}
+    .sec07 .bg2{height: 402px; background: #FFF100;}
+
+
+
+
+</style> <!-- *은 border와 padding까지 우리가 생각하는 width의 개념으로 들어가게 됨.
+			border크기를 주어도 컨텐츠의 width,height가 커지지 않음.,vertical-align는 요소 수직정렬 기준, baseline은 기본...!, text-decoration: none; 장식선 제거, justify: 메인축 방향으로 아이템 정렬, overflow: hidden; 공간에 튀어나온 거 숨기기, word-break: keep-all; 단어 기준 줄바꿈, border-radius: 모서리 둥글게 -->
+</head>
+
+<body>
+	<div class="wrap">
+		<header class="header">
+			<div class="inner"> <!--마진 0, inner 적용시 div 중앙정렬이 가능하닥!-->
+				<h1 class="logo">
+					<a href="#sec01">
+						<img src="logo.svg">
+					</a>
+				</h1>
+				<ul class="gnb"> <!-- Global Navigation Bar의 약자,  사이트 메뉴태그 클래스명...-->
+					<li><a href="#sec02" class="notosans">서비스 소개</a></li>
+					<li><a href="#sec06" class="notosans">문의사항</a></li>
+					<li><a href="#sec07" class="notosans">BUY NOW</a></li>
+				</ul>
+			</div>
+		</header>
+
+<section class="sec01">
+	<h2>
+		<img class="w-auto" img src="title.png"><!--w-aito는 width 0; class-->
+		</h2>
+		<p>라면보다 빠르다! 속전속결 수저 트레이드 서비스</p>
+	</section>
+
+	<section class="sec02">
+		<div class="img-wrap">
+			<img src="img_spoon.png">
+		</div>
+		<div class="text-wrap">
+			<strong>엥? 도대체<br>그게 뭔데요?</strong><!-- strong는 강조하고 싶을 때...-->
+			<p class="notosans">평소 가정환경 속에서 부모님의 잔소리, 성격, 가치관, 경제능력, 환경 등이 마음에 안 드실 때가 계셨나요?
+          <br>하지만 마음에 안 든다고 해서 여러분이 바뀌어야 하는 시대는
+          안녕! 자녀가 바뀌어야 한다는 고정관념을 바꿔야 할 때입니다. 그렇기 때문에 이제껏 고민해왔던 수저 교환을 수저 트레이드
+          서비스를 통해 여러분들의 “부모님"을 쉽고 빠르게 바꿀 수
+          있습니다!</p>
+      	</div>
+      </section>
+      <section class="sec03">
+      	<h2>주요 문제</h2>
+      	<div class="img-wrap img01">
+      		<div class="img-box">
+          	<img src="sec03_img01.jpg">
+          	<p class="notosans">잔소리</p>
+          </div>
+      		<div class="img-box">
+          	<img src="sec03_img02.jpg">
+          	<p class="notosans">성격</p>
+          </div>
+      		<div class="img-box">
+          	<img src="sec03_img03.jpg">
+          	<p class="notosans">가치관</p>
+          </div>
+      		<div class="img-box">
+          	<img src="sec03_img04.jpg">
+          	<p class="notosans">경제력</p>
+          </div>
+      </div>
+      <p class="notosans">그럼, 이제 어떻게 바꾸냐구요?</p>
+      <div class="img-wrap img-02">
+      	<img src="sec03_txt01.png">
+      </div>
+      </section>
+
+<section class="sec04">
+	<ol class="step">
+		<li>
+			<div class="number"><img src="sec04_num1.png"></div>
+			<div class="img-circle"><img src="sec04_img01.png"></div>
+			<div class="img-txt w-auto"><img class="w-auto" src="sec04_txt01.png"></div>
+		</li>
+		<li>
+			<div class="number"><img src="sec04_num2.png"></div>
+			<div class="img-circle"><img src="sec04_img02.png"></div>
+			<div class="img-txt w-auto"><img class="w-auto" src="sec04_txt02.png"></div>
+		</li>
+		<li>
+			<div class="number"><img src="sec04_num3.png"></div>
+			<div class="img-circle"><img src="sec04_img03.png"></div>
+			<div class="img-txt w-auto"><img class="w-auto" src="sec04_txt03.png"></div>
+		</li>
+		<li>
+			<div class="number"><img src="sec04_num4.png"></div>
+			<div class="img-circle"><img src="sec04_img04.png"></div>
+			<div class="img-txt w-auto"><img class="w-auto" src="sec04_txt04.png"></div>
+		</li>
+	</ol>
+	<div class="success">
+		<div class="img-wrap"><img src="sec04_img05.png">
+		</div>
+		<strong>트레이드 성공!</strong>
+	</div>
+</section>
+
+<section class="sec05">
+  <p>마지막으로,
+        <br>모든 것을 잊고
+        <br>새로워진 부모님과
+        <br>마주하며
+        <br>실증났던
+        <br>우리의 현실에서
+        <br>벗어나는 겁니다!</p>
+        </section>
+
+ <section class="sec06">
+ 	<div class="bg1">
+ 		<div class="txt-01">
+ 			<div class="speech-bubble">
+ 				<p>저 그럼 원래 우리 부모님은...</p>
+ 			</div>
+ 			<div class="speech-bubble">
+ 			<p>걱정할 필요가 없습니다!
+              <br>고객님의 의사로 부모님을 바꾸셨기 때문에
+              <br>당연히 기억은 자동 소각처리 됩니다!</p>
+          </div>
+          <div class="speech-bubble">
+            <p>아... 혹시 그럼 지나가다 저를 봐도 기억을 하실까요...?</p>
+          </div>
+        </div>
+        <div class="circle-wrap">
+        </div>
+        <div class="txt-02">
+          <p>
+            부작용 또한
+            <strong>NEVER<br>!!!!!!!NONO!!!!!!!</strong>
+          </p>
+        </div>
+      </div>
+
+      <p class="txt-03">수저가 트레이드 되는 순간,
+        <br>고객님과의 모든 추억, 기억 모두
+        <br>휴짓조각으로 변하게 되니 걱정마세요 !</p>
+      <div class="bg2">
+        <div class="img-wrap"> 
+          <img src="img_star.png">
+          <img src="sec06_img01.png">
+      </div>
+      <div class="box">
+      	<p class="notosans">항상 가난하고 우울했던 우리집안을 싹쓰리 소각해
+            준다니! 지겨운 잔소리는 물론 따가운 시선, 미래의
+            압박까지 훌훌 털어버릴 수 있는 절호의 기회!</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec07">
+    	<div class="bg1">
+    		<p>자! 이제 끔찍했던
+          <br>기억에서 벗어나
+          <br>새로운 수저로 바뀌실
+          <br>준비가 되셨나요 :)?</p>
+          <div class="img-wrap">
+          	<button type="button">
+          		<img src="yes.png">
+          	</button>
+          	<button type="button">
+          		<img src="no.png">
+          	</button>
+          </div>
+		</div>
+		<div class="bg2"></div>
+	
+</section>
+</body>
+</html>
